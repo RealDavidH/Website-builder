@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="nav border padding-10 flex middle">
+        <div class="flex_row alg-middle">
+            <a href="/" class="no_dec black"><p class="text-30 padding-10">Home Link</p></a>
+            <a class="padding-10" href="/create/event">Create Event</a> 
+            |
+            <a class="padding-10" href="/render/eventlist">Delete Event</a> 
+            |
+            <a class="padding-10" href="/create/news">create news</a> 
+            |
+            <a href="/render/allnews">Delete news</a> 
+            |
+            <a href="/logout">Logout</a> 
+        </div>
+    </div>
+</body>
+
+</html>

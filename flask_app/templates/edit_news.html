@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make user!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body class="background_color1 body">
+    <div class="main_container flex middle">
+        <form action="/process/update/{{ news.id }}" method="post" enctype="multipart/form-data" class="padding-20 border flex_column mar-top-40 width_50">
+            {% for message in get_flashed_messages(category_filter=["err_blank"]) %}
+            <p class="black background_white border_round_5 padding-20"><strong>{{message}}</strong></p>
+            {% endfor %}
+            <input class="text-30 flex middle border-bottom" type="text" placeholder="Title" name="title" value="{{ news.title }}">
+            <div class="container border min_height400 middle flex mar-top-20 flex_column">
+                <img class="height400" src="{{ news.get_img_url }}" alt="">
+                <p>Upload New image here:</p>
+                <input type="file" name="img" >
+                <input type="hidden" name="id" value="{{ news.id }}">
+            </div>
+            <div class="container mar-top-20">
+                <textarea class="fill border padding-10" style="resize: none;" name="content" cols="30" rows="10">{{ news.content }}</textarea>
+            </div>
+            <input type="submit" class="mar-top-20" value="Update">
+        </form>
+    </div>
+</body>
+
+</html>

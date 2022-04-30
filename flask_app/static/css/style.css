@@ -1,0 +1,372 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nav{
+    margin: 20px;
+    flex-direction: column;
+}
+
+.iconimg{
+    height: 20px;
+    width: 20px;
+}
+
+.min_height400{
+    min-height: 400px;
+}
+
+.max150{
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.height200{
+    min-height: 200px;
+    max-height: 200px;
+}
+
+.height400{
+    min-height: 400px;
+    max-height: 400px;
+}
+
+.thumbnail{
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.thumbnail_small{
+    max-height: 150px;
+    max-width: 150px;
+}
+
+.main_container{
+    
+}
+
+.overflow_auto{
+    overflow: auto;
+}
+
+.news_container{
+    min-width: 400px;
+    min-height: 400px;
+}
+
+.imgcarousel{
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.top_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.arrows{
+    width: 100px;
+    height: 100px;
+}
+
+.width_50{
+    min-width: 50%;
+}
+.width_80{
+    min-width: 80%;
+}
+.border-left {
+    border-left: solid #000000;
+}
+.border-right {
+    border-right: solid #000000;
+}
+.border-bottom {
+    border-bottom: solid #000000;
+}
+.border-top {
+    border-top: solid #000000;
+}
+/* add text size to a class*/
+.text-10 {
+    font-size: 10px;
+}
+
+.text-15 {
+    font-size: 15px;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-25 {
+    font-size: 25px;
+}
+
+.text-30 {
+    font-size: 30px;
+}
+
+.text-40 {
+    font-size: 40px;
+}
+
+.text-60 {
+    font-size: 60px;
+}
+
+.text-80 {
+    font-size: 80px;
+}
+
+/* add underline to text */
+.underline {
+    text-decoration: underline;
+}
+.no_dec{
+    text-decoration: none;
+}
+.black{
+    color:black
+}
+.line_through {
+    text-decoration: line-through;
+}
+.border{
+    border: 2px solid black;
+}
+.flex {
+    display: flex;
+}
+.flex_row{
+    display: flex;
+    flex-direction: row;
+}
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+.alg-middle {
+    align-items: center;
+}
+.middle {
+    justify-content: center;
+    align-items: center;
+}
+.middle-top {
+    justify-content: flex-start;
+    align-items: center;
+}
+.bottom-left{
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.bottom-right{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.top-right{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.top-left{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/* add gap to a class */
+.gap-10 {
+    gap: 10px;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+/* add padding to a class */
+.padding-5 {
+    padding: 5px;
+}
+
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.padding-30 {
+    padding: 30px;
+}
+
+.padding-40 {
+    padding: 40px;
+}
+
+/* add padding top to a class */
+.padding-top-10 {
+    padding-top: 10px;
+}
+
+.padding-top-40 {
+    padding-top: 40px;
+}
+
+
+/* add padding bottom to a class */
+.padding-bottom-40 {
+    padding-bottom: 40px;
+}
+
+/* add padding left to a class */
+.padding-left-40 {
+    padding-left: 40px;
+}
+
+/* add padding right to a class */
+.padding-right-20 {
+    padding-right: 20px;
+}
+
+.padding-right-40 {
+    padding-right: 40px;
+}
+
+.padding-right-80 {
+    padding-right: 80px;
+}
+
+/* add margin top to a class */
+.mar-top-5 {
+    margin-top: 5px;
+}
+
+.mar-top-10 {
+    margin-top: 10px;
+}
+
+.mar-top-20 {
+    margin-top: 20px;
+}
+.mar-top-30 {
+    margin-top: 30px;
+}
+
+.mar-top-40 {
+    margin-top: 40px;
+}
+
+.mar-top-60 {
+    margin-top: 60px;
+}
+
+.mar-top-80 {
+    margin-top: 80px;
+}
+
+/* Add margin left to a class */
+.mar-left-5 {
+    margin-left: 5px;
+}
+
+.mar-left-10 {
+    margin-left: 10px;
+}
+
+.mar-left-20 {
+    margin-left: 20px;
+}
+
+.mar-left-40 {
+    margin-left: 40px;
+}
+
+/* Add margin right to a class */
+.mar-right-5 {
+    margin-right: 5px;
+}
+.mar-right-10 {
+    margin-right: 10px;
+}
+
+.mar-right-20 {
+    margin-right: 20px;
+}
+
+.mar-right-40 {
+    margin-right: 40px;
+}
+
+.mar-right-60 {
+    margin-right: 60px;
+}
+
+/* Add margin bottom to a class */
+.mar-bottom-10 {
+    margin-bottom: 10px;
+}
+
+.mar-bottom-20 {
+    margin-bottom: 20px;
+}
+
+.mar-bottom-25 {
+    margin-bottom: 25px;
+}
+
+.mar-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.mar-bottom-40 {
+    margin-bottom: 40px;
+}
+
+
+/* add margin to a class */
+.mar {
+    margin: 20px;
+}
+
+/* col-1 takes up 1 flex */
+.col-1,
+.col-2,
+.col-3 {
+    flex: 1;
+}
+
+/* Takes up 2 flex */
+.col-2 {
+    flex: 2;
+}
+
+/* Takes up 3 flex */
+.col-3 {
+    flex: 3;
+}
+
+.fill{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.around {
+    display: flex;
+    justify-content: space-around;
+}
+
+.evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.between {
+    display: flex;
+    justify-content: space-between;
+}

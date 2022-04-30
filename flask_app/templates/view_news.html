@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make user!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="nav border padding-10 flex middle">
+        <div class="icons">
+            <a href=""><img class="iconimg" src="{{ url_for('static', filename = 'icons/calendar.png') }}" alt=""></a>
+            <a href=""><img class="iconimg" src="{{ url_for('static', filename = 'icons/instagram.png') }}" alt=""></a>
+            <a href=""><img class="iconimg" src="{{ url_for('static', filename = 'icons/facebook.png') }}" alt=""></a>
+        </div>
+        <div class="flex_row alg-middle">
+            <a href="/" class="no_dec black"><p class="text-30 padding-10">Home Link</p></a>
+        </div>
+    </div>
+    <div class="main_container flex_column middle">
+        <div class="padding-20 border flex_column mar-top-20 width_50">
+            <p class="text-30">{{ news.title }}</p>
+            <div class="container border middle flex mar-top-20 flex_column">
+                <img class="height400" src="{{ news.get_img_url }}" alt="">
+            </div>
+            <div class="container mar-top-20 border height200 ">
+                <p class="text-20 padding-10">{{ news.content }}</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

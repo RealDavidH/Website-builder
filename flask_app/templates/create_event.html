@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make user!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="background_color1 body">
+    <div class="main_container flex middle background_color2 border_round_5">
+        <div class="container flex middle-top mar-top-10 ">
+            <form action="/process/event" method="post" class="background_color4 padding-20 color2 border text_dec flex_column width-50 mar-top-40">
+                <p class="text-30">Make Event:</p>
+                <p class="mar-top-20">Name:</p>
+                <input type="text" class="border_round_5 padding-5" name="name">
+                <p class="mar-top-20">Location:</p>
+                <input type="text" class="border_round_5 padding-5" name="location">
+                <p class="mar-top-20">Description:</p>
+                <textarea name="description" style="resize: none;" cols="30" rows="8"></textarea>
+                <p class="mar-top-20">Date:</p>
+                <input type="date" name="date">
+                <input type="submit" class="mar-top-20 btn background_color2" value="Create Event">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

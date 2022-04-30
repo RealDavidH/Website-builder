@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <div class="nav border padding-10 flex middle">
+        <div class="icons">
+            <a href=""><img class="iconimg" src="{{ url_for('static', filename = 'icons/calendar.png') }}" alt=""></a>
+            <a href=""><img class="iconimg" src="{{ url_for('static', filename = 'icons/instagram.png') }}" alt=""></a>
+            <a href=""><img class="iconimg" src="{{ url_for('static', filename = 'icons/facebook.png') }}" alt=""></a>
+        </div>
+        <div class="flex_row alg-middle">
+            <a href="/" class="no_dec black"><p class="text-30 padding-10">Home Link</p></a>  
+            <a href="/admin/login">Admin login</a> 
+        </div>
+    </div>
+    <div class="main_container padding-10 ">
+        <div class="top_container">
+            <img class="arrows" src="{{ url_for('static', filename = 'icons/arrowleft.png') }}" alt="">
+            <div class="imgcarousel border">
+                <img class="img" src="{{ url_for('static', filename = 'images/pong.png') }}" alt="">
+            </div>
+            <img class="arrows" src="{{ url_for('static', filename = 'icons/arrowright.png') }}" alt="">
+        </div>
+        <div class="text-30 padding-10 border-bottom width_50 flex middle">
+            <p>Events</p>
+        </div>
+        <div class="events mar-top-20 flex middle-top min_height400">
+            <div class="col-1 flex_column middle ">
+                <p class="text-30">Upcoming Events</p>
+                {% if events != false %}
+                <ul>
+                    {% for event in events %}
+                    <li>{{ event.summary }} {{ event.start['dateTime'] }} </li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="col-1 border-left flex_column middle">
+                <p class="text-30">Calender</p>
+                <iframe
+                    src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&showTitle=0&showCalendars=0&showTabs=0&showPrint=0&src=czI3NTBnbDk2NTlvY3FpNGlmM2ZuZHFhN2tAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23EF6C00"
+                    style="border:solid 1px #777" width="500" height="300" frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="text-30 padding-10 border-bottom width_50 flex middle mar-top-40">
+            <p>News:</p>
+        </div>
+        <div class="mar-top-20 flex middle-top around min_height400">
+            {% if new != false %}
+            {% for news in new %}
+            <a href="/view/news/{{ news.id }} "class="no_dec black" ><div class="news_container border alg-middle flex_column">
+                <p class="text-20">
+                    <strong>{{ news.title }}</strong>
+                </p>
+                <img class="thumbnail mar-top-20" src="{{ news.get_img_url }}" alt="">
+                <p class="mar-top-20 max150">
+                    {{ news.content }}
+                </p>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No News!</p>
+            {% endif %}
+        </div></a>
+        <a href="/news/list" class="text-30 flex middle">All News</a>
+    </div>
+</body>
+
+</html>

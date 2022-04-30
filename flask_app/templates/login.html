@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make user!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="background_color1 body">
+    <div class="main_container  background_color2 border_round_5">
+        <div class="container col-1 flex middle mar-top-10">
+            <form action="/check/login" method="post" class="background_color4 padding-20 color2 border text_dec flex_column width-50 mar-top-40 ">
+                <p class="text-30">Login:</p>
+                {% for message in get_flashed_messages(category_filter=["err_blank_log"]) %}
+                <p class="black background_white border_round_5 padding-20"><strong>{{message}}</strong></p>
+                {% endfor %}
+                {% for message in get_flashed_messages(category_filter=["err_invaild_log"]) %}
+                <p class="black background_white border_round_5 padding-20"><strong>{{message}}</strong></p>
+                {% endfor %}
+                <p class="mar-top-20">Email:</p>
+                <input type="text" class="border_round_5 padding-5" name="email">
+                <p class="mar-top-20">Password</p>
+                <input type="password" class="border_round_5 padding-5" name="password">
+                <input type="submit" class="mar-top-20 btn background_color2" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
